@@ -39,77 +39,11 @@
 
 //     http://bl.ocks.org/phil-pedruco/9344373
 
-
-var data = [];
-
-d3.csv('../data/locatiegeschiedenis.csv', function(d,i) {
-    var lat = getRightCoords(d.Latitude);
-    var long = getRightCoords(d.Longitude);
-    var date = getTime(d.Time);
-
-    var result = {
-        date: date.date,
-        time: date.time,
-        latitude: lat,
-        longitude: long
-    };
-
-    data.push(result);
-
+d3.csv('../data/locationData.csv', function(d,i) {
+    
 });
 
-function getRightCoords(coords) {
-	var count = coords.length - 7;
-    var secondHalf = coords.slice(count);
-    var firstHalf = coords.substring(0, count)
-    var coord = firstHalf + '.' + secondHalf;
-	return Number(coord);
-}
+d3.csv('../data/musicData.csv', function(d,i) {
 
-function getTime(date) {
-    var timeOnly = date.substring(11);
-    var dateOnly = date.substring(0, 10);
-    var dateFormat = dateOnly.split('/').join('-');
-    var result = {
-        date: dateFormat,
-        time: timeOnly
-    };
-    return result;
-}
-
-var musicData = [];
-
-d3.csv('../data/music.csv', function(d,i) {
-    var date = getRightMusicTime(d.time);
-    var result = {
-        artist: d.Artist,
-        title: d.Title,
-        album: d.Album,
-        date: date.date,
-        time: date.time
-    };
-
-    musicData.push(result);
 });
-
-function getRightMusicTime(date) {
-    var dateOnly = date.split('Mar').join('03').substring(0, 10).split(' ').join('-');
-    var timeOnly = date.substring(12);
-
-    var result = {
-        date: dateOnly,
-        time: timeOnly
-    }
-
-    return result;
-}
-
-var dataReverse;
-var musicDataRevers;
-setTimeout(function() {
-    dataReverse = data.reverse();
-    musicDataRevers = musicData.reverse();
-    console.log(dataReverse);
-    console.log(musicDataRevers);
-}, 1000);
   
