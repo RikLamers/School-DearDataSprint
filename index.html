@@ -5,10 +5,47 @@
     </head>
     <body>
 
+        <div class="container">
+            <div class="intro__text">
+                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
+                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
+                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
+            </div>
+        </div>
+        <div id="container--barchart__artists" class="container--graph">
+            <div id="barchart__artists"></div>
+        </div>
+        <div class="container">
+            <div class="intro__text">
+                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
+                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
+                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
+            </div>
+        </div>
+        <div id="container--choropleth" class="container--graph">
+            <div id="choropleth"></div>
+            <div class="slider-container">
+                <div class="date-tooltip" style="text-align: center;">
+                    <input type="date" max="2018-03-26" min="2018-03-05" value="2018-03-05" id="dateControlledByRange" disabled />
+                </div>
+                <div class="date-slider" style="text-align: center; margin: 10px 0;">
+                    <input type="range" step="86400000" max="1522022400000" min="1520208000000" value="1520208000000" id="rangeControlledByDate" />
+                </div>
+            </div>
+        </div>
+
         <!-- D3 -->
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <!-- TopoJSON -->
-        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v2.min.js"></script>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Data -->
+        <script src="./js/musicData.js"></script>
+        <script src="./js/locationData.js"></script>
+        <!-- Graph JS -->
+        <script src="./js/barchart.js"></script>
+        <script src="./js/choropleth.js"></script>
         <!-- MainJS -->
         <script src="./js/main.js"></script>
     </body>
