@@ -169,8 +169,6 @@ function buildNetherlands(properties, data) {
 
 function buildJapan(properties, data) {
 
-    console.log(data);
-
     var svg = d3.select('#choroplethSVG');
 
     // set standard zoom
@@ -243,11 +241,12 @@ function buildJapan(properties, data) {
 
     });
 
-    svg.call(d3.zoom().on("zoom", function () {
-        // var x = d3.event.transform.x * 7 + -307.9491808452208;
-        // var y = d3.event.transform.y * 7 + -2234.235587745507;
-        // var scale = d3.event.transform.k * 5 + 14.702606135664869;
-        svg.attr("transform", d3.event.transform)
-    }));
+    // make zoomable
+    // svg.call(d3.zoom().on("zoom", function () {
+    //     var x = (d3.event.transform.x * 50) + -4047.9534809248953;
+    //     var y = (d3.event.transform.y * 50) + 2948.2391641178037;
+    //     var scale = (d3.event.transform.k * 30) + 93.18333113594278;
+    //     svg.attr("transform", 'translate(' + x + ',' +  + y +') scale(' + scale +')')
+    // }));
 
 }
