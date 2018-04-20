@@ -48,7 +48,7 @@ function buildBarChartArtist(data, properties) {
             .remove();
     };
 
-    var colours = d3.scaleOrdinal().range(['#EF476F', '#FFD166']);
+    var colours = d3.scaleOrdinal().range(['#FF6B6B', '#FFE66D']);
 
     var customYaxis = function() {
         $('.tick:first-of-type line')
@@ -125,7 +125,7 @@ function buildBarChartArtist(data, properties) {
 
             var tooltipValue = function() {
                 return (
-                    '<div style="background-color: #06D6A0; padding: 9px; border-radius: 5px; text-align: center;"><div><strong>' + d[0] + ' heb ik ' + d[1] + ' keer geluisterd</strong></div></div>'
+                    '<div style="background-color: #184C54; color: white; padding: 9px; border-radius: 5px; text-align: center;"><div><strong>' + d[0] + ' heb ik ' + d[1] + ' keer geluisterd</strong></div></div>'
                 );
             };
             $('.chart__tooltip').html(tooltipValue);
