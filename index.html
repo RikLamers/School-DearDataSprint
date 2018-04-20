@@ -1,35 +1,122 @@
 <html>
     <head>
         <title>Dear data Sprint</title>
+        <link href="https://fonts.googleapis.com/css?family=Anton|Noto+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/main.css" />
     </head>
     <body>
 
-        <div class="container">
-            <div class="intro__text">
-                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
-                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
-                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
-            </div>
-        </div>
-        <div id="container--barchart__artists" class="container--graph">
-            <div id="barchart__artists"></div>
-        </div>
-        <div class="container">
-            <div class="intro__text">
-                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
-                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
-                <p>Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Donec sed odio dui.</p>
-            </div>
-        </div>
-        <div id="container--choropleth" class="container--graph">
-            <div id="choropleth"></div>
-            <div class="slider-container">
-                <div class="date-tooltip" style="text-align: center;">
-                    <input type="date" max="2018-03-26" min="2018-03-05" value="2018-03-05" id="dateControlledByRange" disabled />
+        <div class="m-intro p-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Dear Data</h1>
+                    </div>
                 </div>
-                <div class="date-slider" style="text-align: center; margin: 10px 0;">
-                    <input type="range" step="86400000" max="1522022400000" min="1520208000000" value="1520208000000" id="rangeControlledByDate" />
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-barchart">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="container--barchart__artists" class="container--graph">
+                            <div id="barchart__artists"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-vervolg p-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Vervolg</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-choropleth">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 p-reset">
+                        <div id="container--choropleth" class="container--graph">
+                            <div id="choropleth"></div>
+                            <div class="slider-container p-block">
+                                <div class="date-tooltip" style="text-align: center;">
+                                    <input type="date" max="2018-03-26" min="2018-03-05" value="2018-03-05" id="dateControlledByRange" disabled />
+                                </div>
+                                <div class="date-slider" style="text-align: center; margin: 10px 0;">
+                                    <input type="range" step="86400000" max="1522022400000" min="1520208000000" value="1520208000000" id="rangeControlledByDate" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-bronnen p-block">
+            <div class="container">
+                <div class="col-12">
+                    <h3>Bronnen</h3>
+                </div>
+                <div class="m-bronnen__lijst p-block">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Algemene hulp code:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://www.stackoverflow.com">www.stackoverflow.com</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Japanse kaart:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/hunzy/9525160">Blocks - Japan Map</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Lijnen op kaart:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/erikhazzard/6201948">Blocks - 6201948</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Algemene info kaarten:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://www.youtube.com/watch?v=aNbgrqRuoiE">YoutTube - Making a world map with d3, topojson, and a csv</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">D3:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://www.d3js.org">D3 - Inspiratie + hulp</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
