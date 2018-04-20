@@ -10,6 +10,7 @@ $('#rangeControlledByDate').on('input', function() {
 
 var slider = document.getElementById('rangeControlledByDate');
 var filterDate = document.getElementById('dateControlledByRange');
+var filter;
 
 slider.addEventListener('change', function() {
     // Remove svg to build again
@@ -18,7 +19,7 @@ slider.addEventListener('change', function() {
 
     // Format filter right
     var filterSplit = filterDate.value.split('-');
-    var filter = filterSplit[2] + '-' + filterSplit[1] + '-' + filterSplit[0];
+    filter = filterSplit[2] + '-' + filterSplit[1] + '-' + filterSplit[0];
 
     buildBaseGraphs(locationData, musicData, filter);
 });
@@ -43,6 +44,12 @@ function rebuildOnResize() {
 
     // Build linegraph again
     buildBaseGraphs(musicData); 
+
+    var choropleth = document.getElementById('choroplethSVG');
+    choropleth.remove();
+
+    // Build choropleth again
+    buildBaseGraphs(locationData, musicData, filter);
 }
 
 // Base function
@@ -54,6 +61,7 @@ function buildBaseGraphs(data, data2 = 0, filter = '05-03-2018') {
         .append('div')
         .attr('class', 'chart__tooltip')
         .style('position', 'absolute')
+        .style('top', '0')
         .style('z-index', '10')
         .style('visibility', 'hidden')
         .style('opacity', 0);
@@ -82,8 +90,8 @@ function buildBaseGraphs(data, data2 = 0, filter = '05-03-2018') {
     };
 
     var chartSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    chartSVG.setAttribute('width', width);
-    chartSVG.setAttribute('height', height);
+    chartSVG.setAttribute('width', width + margin.left + margin.right);
+    chartSVG.setAttribute('height', height + margin.top + margin.bottom);
     chartSVG.setAttribute('id',  data.name + 'SVG');
     chartSVG.setAttribute('style', 'padding:' + margin.top + 'px ' + margin.right + 'px ' + margin.bottom + 'px ' + margin.left + 'px');
     graphDiv.appendChild(chartSVG);
@@ -101,20 +109,3 @@ function buildBaseGraphs(data, data2 = 0, filter = '05-03-2018') {
 
     }
 }
-
-
-// var svg = d3.select("body")
-//         .append("svg")
-//         .attr("width", "100%")
-//         .attr("height", "100%")
-//         .call(d3.zoom().on("zoom", function () {
-//             svg.attr("transform", d3.event.transform)
-//         }))
-//         .append("g")
-
-//     svg.append("circle")
-//         .attr("cx", document.body.clientWidth / 2)
-//         .attr("cy", document.body.clientHeight / 2)
-//         .attr("r", 50)
-//         .style("fill", "#B8DEE6")
-
