@@ -50,21 +50,159 @@ table {
 /* END RESETSHEET */
 html, body {
     width: 100%;
-    overflow-x: hidden;
+	overflow-x: hidden;
+	font-family: 'Noto Sans', sans-serif;
 }
 
-.container {
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
-    padding: 50px 25px;
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Anton', sans-serif;
+	text-align: center;
+	color: #333333;
 }
 
-.container--graph {
-	display: block;
-	margin: 0 auto;
+h1 {
+	font-size: 48px;
+	margin: 20px 0;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 36px;
+}
+
+h4 {
+	font-size: 30px;
+}
+
+h5 {
+	font-size: 25px;
+}
+
+h6 {
+	font-size: 20px;
 }
 
 p {
-    margin: 1em 0;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.p-block {
+	padding: 10px 10px;
+}
+
+.p-text {
+	padding: 10px 5px;
+}
+
+.p-reset {
+	padding: 0!important;
+}
+
+a {
+	color: #4ECDC4;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #4ECDC4;
+	border-bottom: 1px solid #4ECDC4;
+}
+
+.txt--right {
+	text-align: left;
+}
+
+.m-intro, .m-vervolg, .m-bronnen {
+	background-color: #EAF2E3;
+}
+
+.m-bronnen__lijst__item {
+	margin-bottom: 10px;
+}
+
+#dateControlledByRange {
+	border: 3px solid #4ECDC4;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+#rangeControlledByDate {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 15px;
+	background: #EAF2E3;
+	border-radius: 7px;
+	outline: none;
+	opacity: 0.5;
+	transition: all 200ms ease-in-out;
+}
+
+#rangeControlledByDate:hover {
+	opacity: 1;
+}
+
+#rangeControlledByDate::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+	height: 15px;
+	border-radius: 50%;
+    background: #4ECDC4;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+}
+
+#rangeControlledByDate::-webkit-slider-thumb:hover {
+	width: 20px;
+	height: 20px;
+}
+
+.border-custom {
+	border-bottom: 1px solid white;
+}
+
+.border:last-child {
+	border-bottom: none;
+}
+
+
+@media (min-width: 576px) {
+	.p-block {
+		padding: 20px 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.p-block {
+		padding: 30px 20px;
+	}
+
+	.p-text {
+		padding: 20 10px
+	}
+
+	.txt--right {
+		text-align: right;
+	}
+}
+
+@media (min-width: 992px) {
+	.p-block {
+		padding: 40px 30px;
+	}
+
+	.p-text {
+		padding: 30px 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.p-block {
+		padding: 50px 40px;
+	}
 }
