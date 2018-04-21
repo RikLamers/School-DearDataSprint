@@ -102,6 +102,10 @@ p {
 	padding: 0!important;
 }
 
+.p-reset-b {
+	padding-bottom: 0!important;
+}
+
 a {
 	color: #4ECDC4;
 	text-decoration: none;
