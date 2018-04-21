@@ -16,10 +16,11 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="p-text">Tijdens de minor Data Visualisatie was het de bedoeling om gedurende twee weken eigen data te verzamelen. Dit kon van alles zijn. Ik heb hierbij gekozen om mijn locatie bij te gaan houden en de muziek die ik luister. Ik heb voor dit gekozen omdat het en makkelijk was vanwege de hulp die je van Google Timeline krijgt en omdat ik wel een benieuwd was hoeveel ik nu muziek luisterde en op welke momenten ik wat luisterde. Zoals ik al zei heb ik gebruik gemaakt van verschillende diensten om mijn data te verzamelen. Voor mijn locatie heb ik zoals ik al zei gebruik gemaakt van Google Timeline. Deze had ik nog nooit aan gezet en het was dus ideaal dat ik niet andere data erbij deed exporteren. Voor mijn muziek gebruik ik Spotify. In eerste instantie heb ik geprobeerd via de API mijn data op te halen maar dit zou meer tijd kosten dan nodig is. Daarna heb ik een tip van iemand gekregen om Last.FM te gebruiken. De data van Last.FM heb ik via een website kunnen omzetten naar een CSV bestand. De twee visualisaties die ik gemaakt heb zijn beide gerealiseerd in D3.</p>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="p-text p-reset-b">De eerste visualisatie die ik gemaakt heb is over alleen de muziek data die ik verzameld heb. In de drie weken dat ik mijn data verzameld heb, waarvan zelfs 10 dagen in Tokyo, Japan, heb ik meer dan 900 nummers geluisterd. Zelf was ik wel benieuwd naar wat dan de top 10 meest afgespeelde muziek was. Ik had wel al een vaag vermoeden welke artiest ik het meeste geluisterd had, en dit bewijst het wel weer. De verklaring hiervoor is ook vrij simpel. Toen ik de data bij gehouden heb, heb ik kaarten gekocht voor het concert van deze artiest. Daardoor heb ik de muziek weer meer geluisterd😁.</p>
+                        <p class="p-text">Technisch heb ik deze barchart al een keer gemaakt tijdens mijn stage en heb ik veel code kunnen hergebruiken. Wel heb ik opnieuw de data moeten structureren. Hiervoor heb ik gebruik gemaakt van eigen kennis en een functie die ik vond op internet om te tellen hoevaak een artiest voor kwam in mijn data.</p>
                     </div>
                 </div>
             </div>
@@ -39,15 +40,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3>Vervolg</h3>
+                        <h3>Combineren</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="p-text">Natuurlijk had ik ook de data van mij locatie nog en had ik het idee om deze op een kaart van Limburg te plotten. Echter was het een erg ambitieus idee om te realiseren in D3. Zoveel ervaring had ik namelijk nog niet met D3. Toch ben ik de uitdaging aan gegaan en heb ik me wat avondjes kunnen vermaken met de kaart met stippen te maken. Om dit te realiseren heb ik de data op verschillende manieren moeten formateren. Na dat ik de stippen had, was het volgende doel lijnen trekken tussen de punten.</p>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <p class="p-text">Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="p-text">Om lijnen te maken had ik een start- en eindpunt nodig. Hiervoor moest ik de data weer opnieuw formaten. Dit was gelukkig niet het moeilijkste. Moeilijker was het om de muziek die ik tussen twee punten geluisterd had te formatten. Hiervoor moest ik de muziek tijden laten matchen met de locatie tijden. Duurde even, maar het is uiteindelijk gelukt. Hieronder is het eindresultaat te zien. Wanneer je over de lijnen met de muis gaat zie je of ik muziek heb geluisterd om niet.</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +64,7 @@
                                     <input type="date" max="2018-03-26" min="2018-03-05" value="2018-03-05" id="dateControlledByRange" disabled />
                                 </div>
                                 <div class="date-slider" style="text-align: center; margin: 10px 0;">
-                                    <input type="range" step="86400000" max="1522022400000" min="1520208000000" value="1520208000000" id="rangeControlledByDate" />
+                                    <input type="range" step="86400000" min="1520208000000" max="1522022400000" value="1520208000000" id="rangeControlledByDate" />
                                 </div>
                             </div>
                         </div>
@@ -79,10 +80,34 @@
                 <div class="m-bronnen__lijst p-block">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Locatie data:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://www.google.com/maps/timeline" target="_blank">www.google.com/maps/timeline</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Muziek data:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://www.last.fm" target="_blank">www.last.fm</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Muziek data naar CSV:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://benjaminbenben.com/lastfm-to-csv/" target="_blank">www.benjaminbenben.com/lastfm-to-csv/</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
                             <p class="m-bronnen__lijst__item txt--right">Algemene hulp code:</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <p class="m-bronnen__lijst__item"><a href="https://www.stackoverflow.com">www.stackoverflow.com</a></p>
+                            <p class="m-bronnen__lijst__item"><a href="https://www.stackoverflow.com" target="_blank">www.stackoverflow.com</a></p>
                         </div>
                     </div>
                     <div class="row">
@@ -90,7 +115,7 @@
                             <p class="m-bronnen__lijst__item txt--right">Japanse kaart:</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/hunzy/9525160">Blocks - Japan Map</a></p>
+                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/hunzy/9525160" target="_blank">Blocks - Japan Map</a></p>
                         </div>
                     </div>
                     <div class="row">
@@ -98,7 +123,7 @@
                             <p class="m-bronnen__lijst__item txt--right">Lijnen op kaart:</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/erikhazzard/6201948">Blocks - 6201948</a></p>
+                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/erikhazzard/6201948" target="_blank">Blocks - 6201948</a></p>
                         </div>
                     </div>
                     <div class="row">
@@ -106,7 +131,7 @@
                             <p class="m-bronnen__lijst__item txt--right">Algemene info kaarten:</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <p class="m-bronnen__lijst__item"><a href="https://www.youtube.com/watch?v=aNbgrqRuoiE">YoutTube - Making a world map with d3, topojson, and a csv</a></p>
+                            <p class="m-bronnen__lijst__item"><a href="https://www.youtube.com/watch?v=aNbgrqRuoiE" target="_blank">YoutTube - Making a world map with d3, topojson, and a csv</a></p>
                         </div>
                     </div>
                     <div class="row">
@@ -114,7 +139,23 @@
                             <p class="m-bronnen__lijst__item txt--right">D3:</p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <p class="m-bronnen__lijst__item"><a href="https://www.d3js.org">D3 - Inspiratie + hulp</a></p>
+                            <p class="m-bronnen__lijst__item"><a href="https://www.d3js.org" target="_blank">D3 - Inspiratie + hulp</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Hoe gebruik je coördinaten in D3:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://bl.ocks.org/phil-pedruco/7745589" target="_blank">Blocks - Plotting points on a map in D3</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item txt--right">Kleurenpalet:</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <p class="m-bronnen__lijst__item"><a href="https://coolors.co/" target="_blank">www.coolers.co</a></p>
                         </div>
                     </div>
                 </div>
